@@ -1,0 +1,6 @@
+name: MysticItems
+version: '${project.version}'
+main: me.trumbo.mysticitems.MysticItems
+api-version: '1.16'
+commands:
+  mitems:

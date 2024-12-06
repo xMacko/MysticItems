@@ -1,0 +1,92 @@
+messages:
+  no-perm: "&#00D5FB&lM&#00C9FB&ly&#00BDFC&ls&#00B1FC&lt&#00A5FD&li&#009AFD&lc&#008EFD&lI&#0082FE&lt&#0076FE&le&#006AFF&lm&#005EFF&ls &8▪ &fУ вас нету прав!"
+  config-reloaded: "&#00D5FB&lM&#00C9FB&ly&#00BDFC&ls&#00B1FC&lt&#00A5FD&li&#009AFD&lc&#008EFD&lI&#0082FE&lt&#0076FE&le&#006AFF&lm&#005EFF&ls &8▪ &fПлагин перезагружен!"
+  player-not-found: "&#00D5FB&lM&#00C9FB&ly&#00BDFC&ls&#00B1FC&lt&#00A5FD&li&#009AFD&lc&#008EFD&lI&#0082FE&lt&#0076FE&le&#006AFF&lm&#005EFF&ls &8▪ &fИгрок не найден"
+  invalid-item-type: "&#00D5FB&lM&#00C9FB&ly&#00BDFC&ls&#00B1FC&lt&#00A5FD&li&#009AFD&lc&#008EFD&lI&#0082FE&lt&#0076FE&le&#006AFF&lm&#005EFF&ls &8▪ &fТакого типа предмета не существует."
+  usage: "&#00D5FB&lM&#00C9FB&ly&#00BDFC&ls&#00B1FC&lt&#00A5FD&li&#009AFD&lc&#008EFD&lI&#0082FE&lt&#0076FE&le&#006AFF&lm&#005EFF&ls &8▪ &fИспользуй /utnt give <игрок> <вид> <кол-во>"
+  player-given-item: "&#00D5FB&lM&#00C9FB&ly&#00BDFC&ls&#00B1FC&lt&#00A5FD&li&#009AFD&lc&#008EFD&lI&#0082FE&lt&#0076FE&le&#006AFF&lm&#005EFF&ls &8▪ &fИгроку &6&l%player% &fбыл выдан &6&l%item_type% &fв количестве &7- &6&l%amount%"
+  invalid-amount: "&#00D5FB&lM&#00C9FB&ly&#00BDFC&ls&#00B1FC&lt&#00A5FD&li&#009AFD&lc&#008EFD&lI&#0082FE&lt&#0076FE&le&#006AFF&lm&#005EFF&ls &8▪ &fКоличество должно быть целым числом."
+  positive-amount: "&#00D5FB&lM&#00C9FB&ly&#00BDFC&ls&#00B1FC&lt&#00A5FD&li&#009AFD&lc&#008EFD&lI&#0082FE&lt&#0076FE&le&#006AFF&lm&#005EFF&ls &8▪ &fКоличество должно быть положительным."
+  command-list:
+    - '&6Доступные команды &d&LMystic&f&lItems'
+    - '&d/mitems give &f<игрок> <вид> <кол-во> выдать игроку мистический предмет.'
+    - '&d/mitems reload &fперезагрузить конфигурационный файл.'
+items:
+  Bomb:
+    material: HEART_OF_THE_SEA
+    display-name: "&#FB6200&lБ&#FC7200&lо&#FC8100&lм&#FD9100&lб&#FDA000&lо&#FEB000&lч&#FEBF00&lк&#FFCF00&lа"
+    item-lore:
+      - ''
+      - '&7Уникальный предмет который при &fактивации'
+      - '&7создаёт виртуальный &cвзрыв&7 который отталкивает'
+      - '&7от вас существ.'
+      - ''
+      - '&7&oАктивация нажатием &fПКМ'
+    push-radius: 10.0  # Радиус откидывания
+    push-strength: 1.5  # Сила откидывания
+    cooldown: 3  # Кулдаун в секундах
+    target: MOBS # PLAYER - Откидывание только игроков, MOBS - только мобов (Можно указывать конкретные типы мобов)
+    cancel-if-no-entities: true # true - отменяет использование, если цели не найдены; false - всегда использовать
+    no-cooldown: "&f[&c&l!&f] &#FB6200&lБ&#FC7200&lо&#FC8100&lм&#FD9100&lб&#FDA000&lо&#FEB000&lч&#FEBF00&lк&#FFCF00&lа &fперезаряжается"
+    no-entities: "&f[&c&l!&f] Отмена эффекта взрыва по близости нету подходящей цели!"
+  Locket:
+    material: NETHER_STAR
+    display-name: "&#49FB00&lЖ&#52FB0D&lи&#5CFB19&lв&#65FC26&lи&#6EFC33&lт&#77FC40&lе&#81FC4C&lл&#8AFD59&lь&#93FD66&lн&#9DFD73&lы&#A6FD7F&lй &#AFFD8C&lм&#B8FE99&lе&#C2FEA5&lд&#CBFEB2&lа&#D4FEBF&lл&#DDFFCC&lь&#E7FFD8&lо&#F0FFE5&lн"
+    item-lore:
+      - ''
+      - '&7Уникальный предмет который при &fактивации'
+      - '&7создаёт волну которая &eлечит игроков!'
+      - ''
+      - '&7&oАктивация нажатием &fПКМ'
+    heal-radius: 5.0 # Радиус действия медальона
+    heal-amount: 4.0 # Сколько здоровья восстановить (2 сердца = 4 единицы здоровья)
+    heal-self: true # true - лечить игрока, использующего медальон, false - не лечить
+    cooldown: 10 # Кулдаун в секундах
+    target: MOBS # Типы сущностей для лечения
+    cancel-if-no-entities: true # true - отменяет использование, если цели не найдены; false - всегда использовать
+    cancel-if-all-full-health: true # true - отменяет использование, если цели имеют полное здоровье; false - всегда использовать
+    no-cooldown: "&f[&c&l!&f] &#49FB00&lЖ&#52FB0D&lи&#5CFB19&lв&#65FC26&lи&#6EFC33&lт&#77FC40&lе&#81FC4C&lл&#8AFD59&lь&#93FD66&lн&#9DFD73&lы&#A6FD7F&lй &#AFFD8C&lм&#B8FE99&lе&#C2FEA5&lд&#CBFEB2&lа&#D4FEBF&lл&#DDFFCC&lь&#E7FFD8&lо&#F0FFE5&lн &fперезаряжаеться"
+    no-entities: "&f[&c&l!&f] Отмена эффекта лечения по близости нету подходящей цели!"
+    all-full-health: "&f[&c&l!&f] Все цели в радиусе имеют полное здоровье, эффект отменён."
+    heal-message: "&f[&e&l!&f] Вы вылечели &e%healed_count% игроков/мобов &fвокруг себя!"
+  Silence:
+    material: FERMENTED_SPIDER_EYE
+    display-name: "&#005DFB&lБ&#0059E8&lе&#0055D6&lз&#0051C3&lм&#004EB1&lо&#004A9E&lл&#00468B&lв&#004279&lи&#003E66&lе"
+    item-lore:
+      - ''
+      - '&7Уникальный предмет который при &fактивации'
+      - '&7находит близжайщего игрока и накладывает на него'
+      - '&7эффект безмолвия, запрещая пользоваться предметами'
+      - ''
+      - '&7&oАктивация нажатием &fПКМ'
+      - '&8Deadlock moment'
+    silence-radius: 5.0
+    duration: 10 # Длительность безмолвия
+    cooldown: 1 # Кулдаун в секундах
+    no-cooldown: "&f[&c&l!&f] &#005DFB&lБ&#0059E8&lе&#0055D6&lз&#0051C3&lм&#004EB1&lо&#004A9E&lл&#00468B&lв&#004279&lи&#003E66&lе &fперезаряжается"
+    success: "&f[&e&l!&f] Вы успешно наложили эффект на %target%!"
+    no-target: "&f[&c&l!&f] Отмена эффекта безмолвия по близости нету подходящей цели!"
+    cannot-use-items: "&f[&c&l!&f] Вы не можете пользоваться предметами под эффектом безмолвия!"
+    removed: "&f[&e&l!&f] Эффект безмолвия был утрачен, быстрее ультуй!"
+  Bloodletting:
+    material: REDSTONE
+    display-name: "&#FB0000&lК&#FB0C0C&lр&#FC1717&lо&#FC2323&lв&#FC2F2F&lо&#FD3A3A&lп&#FD4646&lу&#FD5252&lс&#FE5D5D&lк&#FE6969&lа&#FE7575&lн&#FF8080&lи&#FF8C8C&lе"
+    item-lore:
+      - ''
+      - '&7Уникальный предмет который при &fактивации'
+      - '&7находит игроков около вас и накладывает на них'
+      - '&7эффект кровопускания, нанося им постепенный урон'
+      - ''
+      - '&7&oАктивация нажатием &fПКМ'
+      - '&8Кусь-кусь'
+    blood-radius: 5
+    damage: 3
+    duration: 10 # Длительность кровопускания
+    cooldown: 1 # Кулдаун в секундах
+    damage-interval: 5 # Интервал между нанесением урона в секундах
+    target: MOBS
+    cancel-if-no-entities: true
+    no-entities: "&f[&c&l!&f] Отмена эффекта кровопускания по близости нету подходящей цели!"
+    action-bar-message: "&cВы истекаете кровью"
+    no-cooldown: "&f[&c&l!&f] &#FB0000&lК&#FB0C0C&lр&#FC1717&lо&#FC2323&lв&#FC2F2F&lо&#FD3A3A&lп&#FD4646&lу&#FD5252&lс&#FE5D5D&lк&#FE6969&lа&#FE7575&lн&#FF8080&lи&#FF8C8C&lе &fперезаряжается"
+    blood-message: "&F[&e!&f] Вы пустили кровь по &c%count% игрокам/мобам"
